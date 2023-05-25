@@ -1,38 +1,138 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.appHeader {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  background-color: #f4f4f4;
+  width: 100%;
   text-align: center;
+  text-transform: uppercase;
+  color: #49c0aa;
+  border: solid 2px #6f6868;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chatApp {
+  background-size: cover;
+  border: 10px solid #000000;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.messagesList {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f4f4f4;
+  background-size: cover;
+  padding: 20px 0px;
+  margin: 0px auto 20px;
+  width: 100%;
+  max-width: 900px;
+  flex-grow: 1;
+  overflow: hidden;
+  border: solid 2px #6f6868;
+}
+
+.messageText {
+  padding: 10px;
+  height: auto;
+  max-width: 300px;
+  max-height: auto;
+  background-color: #79bfa1;
   color: white;
+  display: inline-block;
+  text-align: justify;
+  word-wrap: break-word;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.Messaging {
+  display: flex;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.memberUsername {
+  color: rgb(184, 177, 177);
+  font-size: 14px;
+  padding-bottom: 6px;
+}
+.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.currentMember .messageContent .messageText {
+  background-color: #d46a8d;
+  align-items: flex-end;
+}
+
+ul.messagesList {
+  overflow-y: scroll;
+}
+
+ul.messagesList::-webkit-scrollbar {
+  display: none;
+}
+
+.memberIcon {
+  margin: 0px 15px 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.messageInput {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  border-radius: 8px;
+  margin-left: 320px;
+  border: 1px solid #6f6868;
+  height: 30px;
+}
+
+.messageInput::placeholder {
+  padding: 5px;
+}
+
+.messageInput[type="text"] {
+  padding: 10px;
+}
+
+.sendButton {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 17px;
+  font-style: italic;
+  background-color: #f4f4f4;
+  color: #6f6868;
+  border: 2px solid #6f6868;
+  border-radius: 8px;
+  margin-left: 10px;
+  height: 50px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: #b9b8b8;
+}
+
+.error {
+  margin-left: 285px;
+  width: 550px;
+  color: #6f6868;
+  font-style: italic;
+}
+
+.messagesTime {
+  font-size: 10px;
+  text-align: end;
 }
